@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<form action="processar_cadastro.php" method="POST" autocomplete="off">
+    <form action="processar_cadastro.php" method="POST" autocomplete="off">
+    <fieldset>
+        <legend>Dados Pessoais e de Acesso</legend>
+        
+        <div class="input-group">
+            <div class="field">
+                <label for="nome_completo">Nome Completo</label>
+                <input type="text" id="nome_completo" name="nome_completo" required autocomplete="name" placeholder="Ex: Maria da Silva">
+            </div>
+
+            <div class="field">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="seu.email@exemplo.com">
+            </div>
+        </div>
+        
+        <div class="input-group">
+            <div class="field">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" required autocomplete="tel" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" title="Formato: XX XXXXX-XXXX" placeholder="11 98765-4321">
+            </div>
+
+            <div class="field">
+                <label for="data_nascimento">Data de Nascimento</label>
+                <input type="date" id="data_nascimento" name="data_nascimento" required>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <div class="field">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required autocomplete="new-password" placeholder="Mínimo 8 caracteres" minlength="8">
+            </div>
+
+            <div class="field">
+                <label for="confirma_senha">Confirmação de Senha</label>
+                <input type="password" id="confirma_senha" name="confirma_senha" required autocomplete="new-password" placeholder="Repita a senha" minlength="8">
+            </div>
+        </div>
+    </fieldset>
+
+    <hr>
+
+    <fieldset>
+        <legend>Preferências e Opções</legend>
+
+        <div class="input-group">
+            <div class="field" style="flex-basis: 30%;">
+                <label for="area_interesse">Área de Interesse</label>
+                <select id="area_interesse" name="area_interesse" required>
+                    <option value="" disabled selected>Selecione uma opção...</option>
+                    <option value="tecnologia">Tecnologia e TI</option>
+                    <option value="marketing">Marketing Digital</option>
+                    <option value="financas">Finanças e Investimentos</option>
+                </select>
+            </div>
+            
+            <div class="field">
+                <p style="margin-top: 0;">Receber Notificações por:</p>
+                <input type="radio" id="notif_email" name="notificacao" value="email" checked>
+                <label for="notif_email" style="margin-right: 15px;">E-mail</label>
+
+                <input type="radio" id="notif_whatsapp" name="notificacao" value="whatsapp">
+                <label for="notif_whatsapp" style="margin-right: 15px;">WhatsApp</label>
+
+                <input type="radio" id="notif_sms" name="notificacao" value="sms">
+                <label for="notif_sms">SMS</label>
+            </div>
+        </div>
+
+        <div class="field">
+            <input type="checkbox" id="termos" name="termos" value="aceito" required>
+            <label for="termos">Eu li e aceito os **Termos de Serviço**.</label>
+        </div>
+        
+    </fieldset>
+
+    <hr>
+
+    <button type="submit">Finalizar Cadastro</button>
+</form>
+</head>
+<body>
+    
+</body>
+</html>

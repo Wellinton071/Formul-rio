@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Digital - Inscrição</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <main> <!-- Menu:  Principal que será o meio do corpo -->
+        <section class="formulario-section">
+        <h2>Formulario de Inscrição</h2>
+        <form method="get" action="enviaparabancodedados.php" class="formulario"> <!--agrupar elementos de entrada de dados como campos de texto, caixas de seleção e botões-->
+        
+    
+
+                <fieldset>
+                    <legend>Dados Pessoais</legend><!-- Ela agrupa elementos como inputs e botões, desenhando uma borda ao redor deles e é frequentemente usada com a tag <legend> para adicionar um título a esse grupo.-->
+                    <label for="nome">Nome Completo</label> <!-- São rotulos:  Seu objetivo fundamental é fornecer campos interativos onde os usuários podem inserir dados, como texto, números, datas ou selecionar opções.-->
+                    <input type="text" id="nome" name="nome" required> <!--  Campos interativos aonde o usuario pode inserir dados-->
+                        
+                        <label for="email">E-Mail</label>
+                        <input type="email"  id="email" name="email" required> <!-- ID é um identificador unico-->
+                        
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                        
+                        <label for="idade">Idade</label>
+                        <input type="number" id="idade" name="idade" min="16"  max="80" required>
+
+                </fieldset>
+
+                <fieldset> <!-- Mostra as linhas envolta dela.-->
+                    <legend>Cursos de Interesse</legend> <!-- Legendas-->
+
+                        <label for="curso">Escolha o Curso:</label> 
+                        <select id="curso" name ="curso">
+                                <option value="">Selecione um Curso</option>   
+                                <option value="html-css">HTML & CSS</option>
+                                <option value="javascript">JavaScrip</option>
+                                <option value="python">Python</option>
+                                <option value="design">Design</option>
+                        </select> 
+
+
+                        <label> Modalidade preferida</label>
+                        <div class="radio-group">
+                            <input type="radio" id="online" name="modalidade" value="online">
+                            <label for="online">Online</label>
+
+                            <input type="radio"  id="presencial" name="modalidade"  value="presencial">
+                            <label for="presencial">Presencial</label>
+
+                            <input type="radio" id="hibrido" name="modalidade"  value="hibrido">
+                            <label for="hibrido"> Híbrido</label>
+                        </div>
+                </fieldset>
+                
+
+                <fieldset>
+                    <legend>Informações Adicionais</legend>
+                    <label>Horarios Disponiveis</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="manha" name="horarios" value="manha">
+                        <label for="manha">Manhã</label>
+
+                        <input type="checkbox" id="tarde" name="horarios" value="tarde">
+                        <label for="tarde">Tarde</label>
+
+                        <input type="checkbox" id="noite" name="horarios" value="noite">
+                        <label for="noite">Noite</label>
+                        
+                    </div>
+                    <label for="observacoes">Observações:</label>
+                    <textarea name="observacoes" id="observacoes" rows="4" placeholder="Conte-me mais sobre seus objetivos..."></textarea>
+
+                </fieldset>
+                
+                <div class="botoes">
+                    <button type="submit">Enviar Escrição</button>
+                    <button type="reset">Limpar Formulario</button>
+                    
+                </div>
+           
+        </section>
+    </main>
+
+    <footer> <!-- Rodapé-->
+            <p> &copy; 2025 Escola Digital. Todos os direitos reservados </p>
+    </footer>
+
+     </form>
+</body>
+</html>
